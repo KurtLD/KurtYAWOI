@@ -1,0 +1,154 @@
+# Ignore dynamic link library files
+*.dll           
+
+# Ignore local settings files
+db.sqlite3 
+
+# C extensions
+*.c
+*.h
+
+# Distribution / packaging
+.Python         
+# Ignore Python environment identifier
+A_env/
+env/            
+# Ignore virtual environment directory (replace 'env' with your actual directory name if different)
+venv/           
+# Another possible name for a virtual environment directory
+build/          
+# Ignore build directories
+develop-eggs/   
+# Ignore develop-eggs directories
+dist/           
+# Ignore distribution directories
+downloads/      
+# Ignore downloads directories
+eggs/           
+# Ignore eggs directories
+.eggs/          
+# Ignore .eggs directories
+
+# Byte-compiled / optimized / DLL files
+__pycache__/    
+# Ignore Python cache directories
+*.py[cod]       
+# Ignore Python bytecode files
+*$py.class      
+# Ignore Jython bytecode files
+
+# Distribution / packaging
+*.egg           
+# Ignore egg files
+*.egg-info/     
+# Ignore egg-info directories
+.installed.cfg  
+# Ignore installed configuration files
+*.egg-info/     
+# Ignore egg-info directories
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/        
+# Ignore HTML coverage reports
+.tox/           
+# Ignore tox environments
+.nox/           
+# Ignore nox environments
+.coverage       
+# Ignore coverage files
+*.cover         
+# Ignore coverage files
+*.py,cover      
+# Ignore coverage files
+.hypothesis/    
+# Ignore hypothesis directories
+.pytest_cache/  
+# Ignore pytest cache directories
+cover/          
+# Ignore cover directories
+
+# Translations
+*.mo            
+# Ignore compiled translation files
+*.pot           
+# Ignore translation template files
+
+# Django stuff:
+*.log           
+# Ignore log files
+local_settings.py  
+# Ignore local settings files
+
+# Flask stuff:
+instance/      
+# Ignore Flask instance directories
+.webassets-cache  
+# Ignore webassets cache directories
+
+# Scrapy stuff:
+.scrapy         
+# Ignore Scrapy cache directories
+
+# Sphinx documentation
+docs/_build/    
+# Ignore Sphinx build directories
+
+# PyBuilder
+target/         
+# Ignore PyBuilder target directories
+
+# Jupyter Notebook
+.ipynb_checkpoints  
+# Ignore Jupyter Notebook checkpoints
+
+# IPython
+profile_default/  
+# Ignore IPython profile directories
+ipython_config.py  
+# Ignore IPython config files
+
+# pyenv
+.python-version  
+# Ignore pyenv version files
+
+# celery beat schedule file
+celerybeat-schedule  
+# Ignore Celery beat schedule files
+
+# SageMath parsed files
+*.sage.py       
+# Ignore SageMath parsed files
+
+# Spyder project settings
+.spyderproject  
+# Ignore Spyder project settings files
+.spyproject     
+# Ignore Spyder project settings files
+
+# mkdocs documentation
+/site           
+# Ignore mkdocs build directories
+
+# mypy
+.mypy_cache/    
+# Ignore mypy cache directories
+.dmypy.json     
+# Ignore mypy daemon json files
+dmypy.json      
+# Ignore mypy daemon json files
+
+# Pyre type checker
+.pyre/          
+# Ignore Pyre type checker directories
+
+# End of filed
