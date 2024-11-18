@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
-    <link rel="stylesheet" href="{% static 'index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
 </head>
 <body>
     <nav class="navbar">
@@ -26,19 +26,12 @@
     </nav>
 
     <div class="hero">
-        <h1>Welcome to Our Site</h1>
-        <p>Your awesome tagline goes here</p>
+        <h1>KURT DACAYMAT</h1>
+        <p>At your service</p>
         <button class="cta-button">Get Started</button>
     </div>
 
-    <script>
-        const toggleButton = document.getElementsByClassName('toggle-button')[0]
-        const navbarLinks = document.getElementsByClassName('navbar-links')[0]
-    
-        toggleButton.addEventListener('click', () => {
-            navbarLinks.classList.toggle('active')
-        })
-    </script>
+    <script src="{% static 'js/index.js' %}"></script>
 
 </body>
 </html>
