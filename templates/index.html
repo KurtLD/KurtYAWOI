@@ -17,19 +17,34 @@
         </a>
         <div class="navbar-links">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <div class="hero">
+    <div class="hero" id="home">
         <h1>KURT DACAYMAT</h1>
         <p>At your service</p>
         <button class="cta-button">Get Started</button>
     </div>
+
+    <section id="about">
+        <h2>About</h2>
+        <p>Information about Kurt Dacaymat.</p>
+    </section>
+
+    <section id="portfolio">
+        <h2>Services</h2>
+        <p>Details of the services offered.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Contact information and form.</p>
+    </section>
 
     <script src="{% static 'js/index.js' %}"></script>
 

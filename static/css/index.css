@@ -4,8 +4,14 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 60px;
+}
+
 body {
     font-family: Arial, sans-serif;
+    padding-top: 60px;
 }
 
 .navbar {
@@ -14,6 +20,10 @@ body {
     align-items: center;
     background-color: #333;
     padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .logo {
@@ -29,7 +39,6 @@ body {
 
 .navbar-links li {
     list-style: none;
-    color: #838383;
 }
 
 .navbar-links a {
@@ -38,6 +47,7 @@ body {
     padding: 1rem;
     display: block;
     position: relative;
+    transition: color 0.5s;
 }
 
 .navbar-links a::after {
@@ -57,11 +67,9 @@ body {
 .navbar-links a:focus::after {
     width: 100%;
     left: 0;
-    background: #838383;
 }
 
-.navbar-links ul li a:hover {
-    transition: 0.5s;
+.navbar-links a:hover {
     color: #838383;
 }
 
@@ -88,13 +96,17 @@ button:hover {
     border-radius: 10px;
 }
 
-.hero {
-    height: 90vh;
+.hero, section {
+    height: calc(100vh - 60px); /* Subtract navbar height from viewport height */
+    margin-top: 60px; /* Add margin equal to navbar height */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+.hero {
     background-color: #f4f4f4;
 }
 
@@ -116,6 +128,24 @@ button:hover {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+section#about, section#contact {
+    background-color: #c0bebe;
+}
+
+section#portfolio {
+    background-color: #f4f4f4;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+section p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
 }
 
 @media (max-width: 768px) {
