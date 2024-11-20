@@ -8,45 +8,21 @@
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">Brand</div>
-        <a href="#" class="toggle-button">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </a>
-        <div class="navbar-links">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    
 
     <div class="hero" id="home">
         <h1>KURT DACAYMAT</h1>
         <p>At your service</p>
-        <button class="cta-button">Get Started</button>
+        <form action="{% url 'main' %}" method="GET">
+            <button type="submit" class="cta-button">Get Started</button>
+        </form>
     </div>
-
-    <section id="about">
-        <h2>About</h2>
-        <p>Information about Kurt Dacaymat.</p>
-    </section>
-
-    <section id="portfolio">
-        <h2>Services</h2>
-        <p>Details of the services offered.</p>
-    </section>
-
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Contact information and form.</p>
-    </section>
-
-    <script src="{% static 'js/index.js' %}"></script>
-
+    <script src="{% static 'js/transition.js' %}"></script>
 </body>
 </html>
+
+<!-- 
+#240750
+#344C64
+#577B8D
+#57A6A1 -->

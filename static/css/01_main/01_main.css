@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 60px;
+}
+
+section#home, section#about, section#services, section#contact {
+    height: calc(100vh - 60px); /* Subtract navbar height from viewport height */
+    margin-top: 60px; /* Add margin equal to navbar height */
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(135deg, #240750 0%, #344C64 50%, #577B8D 100%);
+    padding-top: 60px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: inear-gradient(135deg, #240750 0%, #344C64 50%, #577B8D 100%);
+    padding: 20px 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.hidden-navbar {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.logo a {
+    padding-left: 10px;
+    color: #DFF2EB;
+    font-size: 2rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s;
+    margin-right: 20px; /* Add this line to create distance */
+}
+
+.logo a:hover {
+    color: #B9E5E8;
+}
+
+.navbar-links {
+    display: flex;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    opacity: 1;
+    visibility: visible;
+}
+
+.navbar-links.hidden {
+    display: none;
+}
+
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links a {
+    color: #DFF2EB;
+    text-decoration: none;
+    padding: 1rem;
+    display: block;
+    position: relative;
+    transition: color 0.5s;
+}
+
+.navbar-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: #57A6A1;
+    transition: width 0.3s ease;
+}
+
+.navbar-links a:hover::after,
+.navbar-links a:active::after,
+.navbar-links a:focus::after {
+    width: 100%;
+    left: 0;
+}
+
+.navbar-links a:hover {
+    color: #B9E5E8;
+}
+
+button:hover {
+    background-color: #57A6A1;
+    transition: 0.3s;
+}
+
+.toggle-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+section {
+    height: calc(100vh - 60px); /* Subtract navbar height from viewport height */
+    margin-top: 60px; /* Add margin equal to navbar height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #B9E5E8;
+}
+
+section p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #DFF2EB;
+}
+
+#home h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: #DFF2EB;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: 2px;
+    text-decoration: underline;
+}
+
+#home h2, p {
+    color: #B9E5E8;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.cta-button {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    background-color: #57A6A1;
+    color: #DFF2EB;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: transparent;
+    border-color: #57A6A1;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .toggle-button {
+        display: flex;
+        margin-top: 15px;
+    }
+    
+    .logo a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar-links ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-links li {
+        text-align: center;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
